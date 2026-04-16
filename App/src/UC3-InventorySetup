@@ -1,0 +1,14 @@
+public class UseCase3InventorySetup {
+    public static void main(String[] args) {
+        RoomInventory inventory = new RoomInventory();
+
+        inventory.registerRoomType("Single", 5);
+        inventory.registerRoomType("Double", 3);
+        inventory.registerRoomType("Suite", 2);
+
+        System.out.println("--- Use Case 3: Centralized Inventory ---");
+        System.out.println("Single Room Available: " + inventory.getAvailableCount("Single"));
+        System.out.println("Double Room Available: " + inventory.getAvailableCount("Double"));
+        System.out.println("Suite Room Available: " + inventory.getAvailableCount("Suite"));
+    }
+}
